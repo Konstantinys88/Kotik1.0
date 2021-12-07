@@ -70,13 +70,67 @@ public class Kotik {
 
     }
 
+    public String[] liveAnotherDay() {
+        String[] anotherDay = new String[24];
+        for (int i = 0; i < anotherDay.length; i++) {
+            switch (getRandomNumber()){
+                case 1: if (play() == true){
+                    anotherDay[i] = i + " - Играет";
+                }
+                else {
+                    eat(2);
+                    anotherDay[i] = i + " - Ест";
+                }
+                    break;
+
+                case 2: if (sleep() == true){
+                    anotherDay[i] = i + " - Спит";
+                }
+                else  {
+                    eat(3);
+                    anotherDay[i] = i + " - Ест";
+                }
+                    break;
+
+                case 3: if (wash() == true){
+                    anotherDay[i] = i + " - Умывается";
+                }
+                else  {
+                    eat(2);
+                    anotherDay[i] = i + " - Ест";
+                }
+                    break;
+
+                case 4: if (walk() == true){
+                    anotherDay[i] = i + " - Гуляет";
+                }
+                else  {
+                    eat(1);
+                    anotherDay[i] = i + " - Ест";
+                }
+                    break;
+
+                case 5: if (hunt() == true){
+                    anotherDay[i] = i + " - Охотится";
+                }
+                else  {
+                    eat(0);
+                    anotherDay[i] = i + " - Ест";
+                }
+                    break;
+
+            }
+
+        }
+        return anotherDay;
+    }
+
     public void eat(int satiety) {
         this.satiety = satiety;
-        satiety++;
     }
 
     public void eat(int satiety, String food) {
-        this.satiety = satiety;
+
     }
 
     public static void eat() {
@@ -85,61 +139,6 @@ public class Kotik {
 
     public static int getRandomNumber() {
         return (int) (Math.random() * METHODS) + 1;
-    }
-
-    public String[] liveAnotherDay() {
-        String[] anotherDay = new String[24];
-        for (int i = 0; i < anotherDay.length; i++) {
-            switch (getRandomNumber()){
-                case 1: if (play() == true){
-                    anotherDay[i] = i + " Играет";
-                }
-                else {
-                    eat(2);
-                    anotherDay[i] = i + " Ест";
-                }
-                    break;
-
-                case 2: if (sleep() == true){
-                    anotherDay[i] = i + " Спит";
-                }
-                else  {
-                    eat(3);
-                    anotherDay[i] = i + " Ест";
-                }
-                    break;
-
-                case 3: if (wash() == true){
-                    anotherDay[i] = i + " Умывается";
-                }
-                else  {
-                    eat(2);
-                    anotherDay[i] = i + " Ест";
-                }
-                    break;
-
-                case 4: if (walk() == true){
-                    anotherDay[i] = i + " Гуляет";
-                }
-                else  {
-                    eat(1);
-                    anotherDay[i] = i + " Ест";
-                }
-                    break;
-
-                case 5: if (hunt() == true){
-                    anotherDay[i] = i + " Охотится";
-                }
-                else  {
-                    eat(0);
-                    anotherDay[i] = i + " Ест";
-                }
-                    break;
-
-            }
-
-        }
-        return anotherDay;
     }
 
 
