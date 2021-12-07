@@ -12,7 +12,7 @@ public class Application {
         System.out.println(Kotik.getCount());
         System.out.println();
 
-        String[]arr = cat1.liveAnotherDay(cat1);
+        String[]arr = cat1.liveAnotherDay();
         for (String e:arr) {
             System.out.println(e);
 

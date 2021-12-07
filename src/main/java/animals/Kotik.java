@@ -72,6 +72,7 @@ public class Kotik {
 
     public void eat(int satiety) {
         this.satiety = satiety;
+        satiety++;
     }
 
     public void eat(int satiety, String food) {
@@ -86,7 +87,7 @@ public class Kotik {
         return (int) (Math.random() * METHODS) + 1;
     }
 
-    public String[] liveAnotherDay(Kotik cat) {
+    public String[] liveAnotherDay() {
         String[] anotherDay = new String[24];
         for (int i = 0; i < anotherDay.length; i++) {
             switch (getRandomNumber()){
