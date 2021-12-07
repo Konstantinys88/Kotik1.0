@@ -135,7 +135,7 @@ public class Kotik {
     }
 
     public static void eat() {
-        eat();
+       // eat();
     }
 
     public static int getRandomNumber() {
