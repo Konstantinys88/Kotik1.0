@@ -7,6 +7,8 @@ public class Kotik {
     private int satiety;
     private int weight;
 
+    String food;
+
     private static int count;
 
     private final static int METHODS = 5;
@@ -131,11 +133,12 @@ public class Kotik {
 
     public  void eat(int satiety, String food) {
         this.satiety += satiety;
+        this.food = food;
 
     }
 
-    public static void eat() {
-
+    public boolean eat() {
+        return false;
     }
 
     public static int getRandomNumber() {
