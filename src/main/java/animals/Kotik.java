@@ -129,14 +129,13 @@ public class Kotik {
         this.satiety += satiety;
     }
 
-    public void eat(int satiety, String food) {
-        this.satiety += satiety;
-
-    }
-
-    public static void eat() {
-       // eat();
-    }
+//    public void eat(int satiety, String food) {
+//        this.satiety += satiety;
+//    }
+//
+//    public static void eat() {
+//        eat();
+//    }
 
     public static int getRandomNumber() {
         return (int) (Math.random() * METHODS) + 1;
