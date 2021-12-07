@@ -9,7 +9,7 @@ public class Application {
 
     public static void main(String[] args) {
 
-        Kotik cat1 = new Kotik("Vasia","Gav",10,8);
+        Kotik cat1 = new Kotik("Vasia","Gav",5,8);
         Kotik cat2 = new Kotik();
 
         Application.compareVoice(cat1,cat2);
