@@ -4,7 +4,7 @@ package animals;
 public class Kotik {
     private String name;
     private String voice;
-    private static int satiety;
+    private int satiety;
     private int weight;
 
     private static int count;
@@ -126,7 +126,7 @@ public class Kotik {
     }
 
     public void eat(int satiety) {
-        Kotik.satiety = satiety;
+       this.satiety += satiety;
     }
 
     public void eat(int satiety, String food) {
