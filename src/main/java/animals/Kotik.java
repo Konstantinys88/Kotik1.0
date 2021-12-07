@@ -125,8 +125,9 @@ public class Kotik {
         return anotherDay;
     }
 
-    public void eat(int satiety) {
+    public boolean eat(int satiety) {
         this.satiety += satiety;
+        return true;
     }
 
     public void eat(int satiety, String food) {
