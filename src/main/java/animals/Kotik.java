@@ -78,7 +78,7 @@ public class Kotik {
                     anotherDay[i] = i + " - Играет";
                 }
                 else {
-                    eat(2);
+                    eat(getRandomNumber());
                     anotherDay[i] = i + " - Ест";
                 }
                     break;
@@ -87,7 +87,7 @@ public class Kotik {
                     anotherDay[i] = i + " - Спит";
                 }
                 else  {
-                    eat(3);
+                    eat(getRandomNumber());
                     anotherDay[i] = i + " - Ест";
                 }
                     break;
@@ -96,7 +96,7 @@ public class Kotik {
                     anotherDay[i] = i + " - Умывается";
                 }
                 else  {
-                    eat(2);
+                    eat(getRandomNumber());
                     anotherDay[i] = i + " - Ест";
                 }
                     break;
@@ -105,7 +105,7 @@ public class Kotik {
                     anotherDay[i] = i + " - Гуляет";
                 }
                 else  {
-                    eat(1);
+                    eat(getRandomNumber());
                     anotherDay[i] = i + " - Ест";
                 }
                     break;
@@ -114,7 +114,7 @@ public class Kotik {
                     anotherDay[i] = i + " - Охотится";
                 }
                 else  {
-                    eat(0);
+                    eat(getRandomNumber());
                     anotherDay[i] = i + " - Ест";
                 }
                     break;
@@ -130,6 +130,7 @@ public class Kotik {
     }
 
     public void eat(int satiety, String food) {
+        this.satiety += satiety;
 
     }
 
