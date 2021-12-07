@@ -137,8 +137,8 @@ public class Kotik {
 
     }
 
-    public boolean eat() {
-        return false;
+    public void eat() {
+        eat(getRandomNumber(),"мясо");
     }
 
     public static int getRandomNumber() {
