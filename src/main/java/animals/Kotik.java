@@ -126,7 +126,7 @@ public class Kotik {
     }
 
     public void eat(int satiety) {
-       this.satiety += satiety;
+        this.satiety += satiety;
     }
 
     public void eat(int satiety, String food) {

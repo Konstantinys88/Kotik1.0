@@ -9,7 +9,7 @@ public class Application {
 
     public static void main(String[] args) {
 
-        Kotik cat1 = new Kotik("Vasia","Gav",5,8);
+        Kotik cat1 = new Kotik("Vasia","Gav",0,8);
         Kotik cat2 = new Kotik();
 
         System.out.println(Application.compareVoice(cat1,cat2));
@@ -19,6 +19,8 @@ public class Application {
         for (String e:arr) {
             System.out.println(e);
         }
+
+
 
 
 
