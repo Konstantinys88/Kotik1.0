@@ -24,7 +24,7 @@ public class Kotik {
         count++;
     }
 
-    public boolean play(Kotik cat) {
+    public boolean play() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -33,7 +33,7 @@ public class Kotik {
         }
     }
 
-    public boolean sleep(Kotik cat) {
+    public boolean sleep() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -42,7 +42,7 @@ public class Kotik {
         }
     }
 
-    public boolean wash(Kotik cat) {
+    public boolean wash() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -51,7 +51,7 @@ public class Kotik {
         }
     }
 
-    public boolean walk(Kotik cat) {
+    public boolean walk() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -60,7 +60,7 @@ public class Kotik {
         }
     }
 
-    public boolean hunt(Kotik cat) {
+    public boolean hunt() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -82,7 +82,6 @@ public class Kotik {
         eat();
     }
 
-
     public static int getRandomNumber() {
         return (int) (Math.random() * METHODS) + 1;
     }
@@ -91,7 +90,7 @@ public class Kotik {
         String[] anotherDay = new String[24];
         for (int i = 0; i < anotherDay.length; i++) {
             switch (getRandomNumber()){
-                case 1: if (play(cat) == true){
+                case 1: if (play() == true){
                     anotherDay[i] = i + " Играет";
                 }
                 else {
@@ -100,7 +99,7 @@ public class Kotik {
                 }
                     break;
 
-                case 2: if (sleep(cat) == true){
+                case 2: if (sleep() == true){
                     anotherDay[i] = i + " Спит";
                 }
                 else  {
@@ -109,7 +108,7 @@ public class Kotik {
                 }
                     break;
 
-                case 3: if (wash(cat) == true){
+                case 3: if (wash() == true){
                     anotherDay[i] = i + " Умывается";
                 }
                 else  {
@@ -118,7 +117,7 @@ public class Kotik {
                 }
                     break;
 
-                case 4: if (walk(cat) == true){
+                case 4: if (walk() == true){
                     anotherDay[i] = i + " Гуляет";
                 }
                 else  {
@@ -127,7 +126,7 @@ public class Kotik {
                 }
                     break;
 
-                case 5: if (hunt(cat) == true){
+                case 5: if (hunt() == true){
                     anotherDay[i] = i + " Охотится";
                 }
                 else  {

@@ -16,6 +16,8 @@ public class Application {
         for (String e:arr) {
             System.out.println(e);
 
+            cat1.play();
+
         }
 
 
