@@ -26,7 +26,7 @@ public class Kotik {
         count++;
     }
 
-    public boolean play() {
+    boolean play() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -35,7 +35,7 @@ public class Kotik {
         }
     }
 
-    public boolean sleep() {
+    boolean sleep() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -44,7 +44,7 @@ public class Kotik {
         }
     }
 
-    public boolean wash() {
+    boolean wash() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -53,7 +53,7 @@ public class Kotik {
         }
     }
 
-    public boolean walk() {
+    boolean walk() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -62,7 +62,7 @@ public class Kotik {
         }
     }
 
-    public boolean hunt() {
+    boolean hunt() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -76,7 +76,7 @@ public class Kotik {
         String[] anotherDay = new String[24];
         for (int i = 0; i < anotherDay.length; i++) {
             switch (getRandomNumber()){
-                case 1: if (play() == true){
+                case 1: if (play()){
                     anotherDay[i] = i + " - Играет";
                 }
                 else {
@@ -85,7 +85,7 @@ public class Kotik {
                 }
                     break;
 
-                case 2: if (sleep() == true){
+                case 2: if (sleep()){
                     anotherDay[i] = i + " - Спит";
                 }
                 else  {
@@ -94,7 +94,7 @@ public class Kotik {
                 }
                     break;
 
-                case 3: if (wash() == true){
+                case 3: if (wash()){
                     anotherDay[i] = i + " - Умывается";
                 }
                 else  {
@@ -103,7 +103,7 @@ public class Kotik {
                 }
                     break;
 
-                case 4: if (walk() == true){
+                case 4: if (walk()){
                     anotherDay[i] = i + " - Гуляет";
                 }
                 else  {
@@ -112,7 +112,7 @@ public class Kotik {
                 }
                     break;
 
-                case 5: if (hunt() == true){
+                case 5: if (hunt()){
                     anotherDay[i] = i + " - Охотится";
                 }
                 else  {
@@ -127,21 +127,21 @@ public class Kotik {
         return anotherDay;
     }
 
-    public void eat(int satiety) {
+    void eat(int satiety) {
         this.satiety += satiety;
     }
 
-    public  void eat(int satiety, String food) {
+    void eat(int satiety, String food) {
         this.satiety += satiety;
         this.food = food;
 
     }
 
-    public void eat() {
+    void eat() {
         eat(getRandomNumber(),"мясо");
     }
 
-    public static int getRandomNumber() {
+    static int getRandomNumber() {
         return (int) (Math.random() * METHODS) + 1;
     }
 
