@@ -1,7 +1,6 @@
 package animals;
 
 import food.Food;
-import food.Grass;
 
 public class Cow extends Herbivore implements Run,Swim,Voice{
 
@@ -22,6 +21,7 @@ public class Cow extends Herbivore implements Run,Swim,Voice{
 
     @Override
     public void swim() {
+        System.out.println("плывет");
 
     }
 
@@ -32,6 +32,7 @@ public class Cow extends Herbivore implements Run,Swim,Voice{
 
     @Override
     public void eat(Food food) {
+
 
     }
 

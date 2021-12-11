@@ -1,8 +1,6 @@
 package animals;
 
 
-import animals.Run;
-import animals.Voice;
 import food.Food;
 
 

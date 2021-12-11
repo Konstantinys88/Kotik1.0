@@ -1,7 +1,6 @@
 package animals;
 
 import food.Food;
-import food.Meat;
 
 public class Dog extends Carnivorous implements Run,Swim,Voice{
 

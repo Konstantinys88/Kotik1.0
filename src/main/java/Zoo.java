@@ -1,5 +1,6 @@
 import animals.*;
 import employee.Worker;
+import food.Food;
 import food.Grass;
 import food.Meat;
 
@@ -19,16 +20,26 @@ public class Zoo {
         Meat meat = new Meat();
 
 
-        worker.getVoice(cow);
+        worker.getVoice(crocodile);
+        cow.swim();
+
+
 
     }
 
     static Swim[] createPond(){
-       Swim[] swims = new Swim[6];
-        for (int i = 0; i < swims.length; i++) {
+        Animal[]animals = new Animal[6];
+        animals[0] = new Cow();
+        animals[1] = new Crocodile();
+        animals[2] = new Dog();
+        animals[3] = new Duck();
+        animals[4] = new Fish();
+        animals[5] = new Kotik();
+        Animal[] swims = new Animal[4];
+        for (int i = 0; i < animals.length; i++) {
 
 
         }
-        return swims;
+        return (Swim[]) swims;
     }
 }
