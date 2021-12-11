@@ -23,4 +23,6 @@ public class Crocodile extends Carnivorous implements Run,Swim,Voice {
     public String getVoice() {
         return "RRRR";
     }
+
+
 }

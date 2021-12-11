@@ -10,7 +10,6 @@ public abstract class Animal {
         return Satiety;
     }
 
-
     public abstract int eat(Food food);
 
     public abstract String getVoice();
