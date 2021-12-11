@@ -1,6 +1,6 @@
 package food;
 
-public class Food {
+public abstract class Food {
 
     int getEnergy(int Energy){
         return Energy;

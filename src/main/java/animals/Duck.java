@@ -2,7 +2,7 @@ package animals;
 
 import food.Food;
 
-public class Duck extends Herbivore implements Fly,Swim,Voice {
+public class Duck extends Herbivore implements Fly,Swim,Voice,Run {
 
     private int Satiety;
 
@@ -26,4 +26,8 @@ public class Duck extends Herbivore implements Fly,Swim,Voice {
     }
 
 
+    @Override
+    public void run() {
+
+    }
 }
