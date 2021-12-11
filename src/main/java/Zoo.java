@@ -22,12 +22,12 @@ public class Zoo {
 
     }
 
-    static Animal[] createPond(){
-        Animal[] animals = new Animal[6];
-        for (int i = 0; i < animals.length; i++) {
+    static Swim[] createPond(){
+       Swim[] swims = new Swim[6];
+        for (int i = 0; i < swims.length; i++) {
 
 
         }
-        return animals;
+        return swims;
     }
 }
