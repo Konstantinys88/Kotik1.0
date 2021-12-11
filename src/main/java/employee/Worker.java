@@ -10,7 +10,7 @@ public class Worker {
     }
 
     public void getVoice(Animal animal){
-        System.out.println(animal.getVoice());
+        System.out.println(animal);;
 
 
     }
