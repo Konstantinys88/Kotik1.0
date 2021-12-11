@@ -6,19 +6,18 @@ import food.Meat;
 public class Zoo {
     public static void main(String[] args) {
 
-
-        Kotik kotik = new Kotik();
-        Dog dog = new Dog();
-        Crocodile crocodile = new Crocodile();
-
-        Fish fish = new Fish();
-        Duck duck = new Duck();
         Cow cow = new Cow();
+        Crocodile crocodile = new Crocodile();
+        Dog dog = new Dog();
+        Duck duck = new Duck();
+        Fish fish = new Fish();
+        Kotik kotik = new Kotik();
+
+        Worker worker = new Worker();
 
         Grass grass = new Grass();
         Meat meat = new Meat();
 
-        Worker worker =new Worker();
 
         worker.getVoice(cow);
 

@@ -4,14 +4,24 @@ import food.Food;
 
 public class Duck extends Herbivore implements Fly,Swim,Voice,Run {
 
-    private int Satiety;
+    private String Satiety;
 
-    public int getSatiety() {
+    public String getSatiety() {
         return Satiety;
     }
 
+    public void setSatiety(String satiety) {
+        Satiety = satiety;
+    }
+
+
     @Override
     public void fly() {
+
+    }
+
+    @Override
+    public void run() {
 
     }
 
@@ -25,9 +35,8 @@ public class Duck extends Herbivore implements Fly,Swim,Voice,Run {
         return "Kra";
     }
 
-
     @Override
-    public void run() {
+    public void eat(Food food) {
 
     }
 }

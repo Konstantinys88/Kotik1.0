@@ -3,6 +3,7 @@ package animals;
 
 import animals.Run;
 import animals.Voice;
+import food.Food;
 
 
 public class Kotik extends Carnivorous implements Run, Voice {
@@ -189,6 +190,11 @@ public class Kotik extends Carnivorous implements Run, Voice {
 
     @Override
     public void run() {
+
+    }
+
+    @Override
+    public void eat(Food food) {
 
     }
 }

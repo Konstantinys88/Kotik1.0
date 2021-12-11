@@ -1,17 +1,17 @@
 package animals;
 
 import food.Food;
+import food.Meat;
 
 public class Dog extends Carnivorous implements Run,Swim,Voice{
 
-    public void setSatiety(int satiety) {
-        Satiety = satiety;
+    private String Satiety;
+    public String getSatiety() {
+        return Satiety;
     }
 
-    private int Satiety;
-
-    public int getSatiety() {
-        return Satiety;
+    public void setSatiety(String satiety) {
+        Satiety = satiety;
     }
 
 
@@ -27,7 +27,12 @@ public class Dog extends Carnivorous implements Run,Swim,Voice{
 
     @Override
     public String getVoice() {
-        return "Gaw";
+        return "Gav";
+    }
+
+    @Override
+    public void eat(Food food) {
+
     }
 
 

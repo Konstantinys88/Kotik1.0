@@ -4,15 +4,22 @@ import food.Food;
 
 public class Fish extends Herbivore implements Swim{
 
-    private int Satiety;
+    private String Satiety;
 
-    public int getSatiety() {
+    public String getSatiety() {
         return Satiety;
     }
+
+
 
     @Override
     public String getVoice() {
         return null;
+    }
+
+    @Override
+    public void eat(Food food) {
+
     }
 
     @Override

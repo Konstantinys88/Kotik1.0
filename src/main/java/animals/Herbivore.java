@@ -7,8 +7,5 @@ import food.Meat;
 public abstract class Herbivore extends Animal {
 
 
-    @Override
-    public int eat(Food food) {
-        return 0;
-    }
+
 }

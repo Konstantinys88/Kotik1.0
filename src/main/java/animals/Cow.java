@@ -1,15 +1,19 @@
 package animals;
 
 import food.Food;
+import food.Grass;
 
 public class Cow extends Herbivore implements Run,Swim,Voice{
 
-    private int Satiety;
+    private String Satiety;
 
-    public int getSatiety() {
+    public String getSatiety() {
         return Satiety;
     }
 
+    public void setSatiety(String satiety) {
+        Satiety = satiety;
+    }
 
     @Override
     public void run() {
@@ -23,7 +27,12 @@ public class Cow extends Herbivore implements Run,Swim,Voice{
 
     @Override
     public String getVoice() {
-        return "Myy";
+        return "Myyy";
+    }
+
+    @Override
+    public void eat(Food food) {
+
     }
 
 
