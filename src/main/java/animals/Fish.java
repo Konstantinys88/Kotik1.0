@@ -11,6 +11,11 @@ public class Fish extends Herbivore implements Swim{
     }
 
     @Override
+    public String getVoice() {
+        return null;
+    }
+
+    @Override
     public void swim() {
 
     }

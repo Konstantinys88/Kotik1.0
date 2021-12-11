@@ -12,4 +12,8 @@ public abstract class Animal {
 
 
     public abstract int eat(Food food);
+
+    public abstract String getVoice();
+
+
 }

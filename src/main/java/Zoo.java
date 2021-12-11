@@ -20,6 +20,8 @@ public class Zoo {
 
         Worker worker =new Worker();
 
+        worker.getVoice(cow);
+
     }
 
     static Swim[] createPond(){

@@ -8,6 +8,7 @@ public class Dog extends Carnivorous implements Run,Swim,Voice{
         return Satiety;
     }
 
+
     @Override
     public void run() {
 

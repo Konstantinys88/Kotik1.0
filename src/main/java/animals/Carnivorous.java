@@ -7,4 +7,6 @@ public abstract class Carnivorous extends Animal {
     public int eat(Food food) {
         return 0;
     }
+
+
 }
