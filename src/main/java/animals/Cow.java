@@ -5,15 +5,16 @@ import food.Grass;
 
 public class Cow extends Herbivore implements Run,Swim,Voice{
 
-    private String satiety;
+    private int satiety;
 
-    public String getSatiety() {
+    public int getSatiety() {
         return satiety;
     }
 
 
     @Override
     public void run() {
+        System.out.println("Run");
 
     }
 

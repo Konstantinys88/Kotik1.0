@@ -19,18 +19,17 @@ public class Zoo {
         Food grass = new Grass();
         Food meat = new Meat();
 
-
-        worker.getVoice(crocodile);
-        cow.swim();
-        cow.eat(grass);
-
-        duck.eat(meat);
-        duck.eat(grass);
-        System.out.println(duck.getSatiety());
-        System.out.println(duck.getVoice());
-
-        worker.feed(duck,grass);
         worker.getVoice(dog);
+        worker.getVoice(fish);
+
+        worker.feed(cow,meat);
+        System.out.println(crocodile.getSatiety());
+        worker.feed(crocodile,meat);
+        System.out.println(crocodile.getSatiety());
+        worker.feed(crocodile,meat);
+        System.out.println(crocodile.getSatiety());
+
+
 
 
 

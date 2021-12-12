@@ -5,9 +5,9 @@ import food.Grass;
 
 public class Fish extends Herbivore implements Swim{
 
-    private String satiety;
+    private int satiety;
 
-    public String getSatiety() {
+    public int getSatiety() {
         return satiety;
     }
 

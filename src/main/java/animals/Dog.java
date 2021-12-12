@@ -1,13 +1,13 @@
 package animals;
 
 import food.Food;
-import food.Grass;
 import food.Meat;
 
 public class Dog extends Carnivorous implements Run,Swim,Voice{
 
-    private String satiety;
-    public String getSatiety() {
+    private int satiety;
+
+    public int getSatiety() {
         return satiety;
     }
 

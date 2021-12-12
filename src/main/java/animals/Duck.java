@@ -7,11 +7,9 @@ public class Duck extends Herbivore implements Fly,Swim,Voice,Run {
 
     private int satiety;
 
-
     public int getSatiety() {
         return satiety;
     }
-
 
     @Override
     public void fly() {

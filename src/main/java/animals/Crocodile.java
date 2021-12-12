@@ -5,9 +5,9 @@ import food.Meat;
 
 public class Crocodile extends Carnivorous implements Run,Swim,Voice {
 
-    private String satiety;
+    private int satiety;
 
-    public String getSatiety() {
+    public int getSatiety() {
         return satiety;
     }
 
