@@ -33,19 +33,12 @@ public class Zoo {
 
     }
 
-    static Swim[] createPond(){
+    static Animal[] createPond(){
         Animal[]animals = new Animal[6];
-        animals[0] = new Cow();
-        animals[1] = new Crocodile();
-        animals[2] = new Dog();
-        animals[3] = new Duck();
-        animals[4] = new Fish();
-        animals[5] = new Kotik();
-        Animal[] swims = new Animal[4];
         for (int i = 0; i < animals.length; i++) {
 
 
         }
-        return (Swim[]) swims;
+        return animals;
     }
 }
