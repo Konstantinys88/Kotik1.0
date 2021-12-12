@@ -1,20 +1,21 @@
 package animals;
 
 import food.Food;
+import food.Grass;
 
 public class Fish extends Herbivore implements Swim{
 
-    private String Satiety;
+    private String satiety;
 
     public String getSatiety() {
-        return Satiety;
+        return satiety;
     }
-
-
 
     @Override
     public void eat(Food food) {
-
+        if (food instanceof Grass){
+            this.satiety += ((Grass) food).getEnergy();
+        } else System.out.println("Еда не вкусная");
     }
 
     @Override

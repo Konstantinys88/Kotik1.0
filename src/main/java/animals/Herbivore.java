@@ -4,8 +4,11 @@ import food.Food;
 import food.Grass;
 import food.Meat;
 
-public abstract class Herbivore extends Animal {
+public class Herbivore extends Animal {
 
 
+    @Override
+    public void eat(Food food) {
 
+    }
 }

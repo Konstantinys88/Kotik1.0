@@ -1,18 +1,16 @@
 package animals;
 
 import food.Food;
+import food.Grass;
 
 public class Cow extends Herbivore implements Run,Swim,Voice{
 
-    private String Satiety;
+    private String satiety;
 
     public String getSatiety() {
-        return Satiety;
+        return satiety;
     }
 
-    public void setSatiety(String satiety) {
-        Satiety = satiety;
-    }
 
     @Override
     public void run() {
@@ -32,8 +30,9 @@ public class Cow extends Herbivore implements Run,Swim,Voice{
 
     @Override
     public void eat(Food food) {
-
-
+        if (food instanceof Grass){
+            this.satiety += ((Grass) food).getEnergy();
+        } else System.out.println("Еда не вкусная");
     }
 
 

@@ -16,12 +16,22 @@ public class Zoo {
 
         Worker worker = new Worker();
 
-        Grass grass = new Grass();
-        Meat meat = new Meat();
+        Food grass = new Grass();
+        Food meat = new Meat();
 
 
         worker.getVoice(crocodile);
         cow.swim();
+        cow.eat(grass);
+
+        duck.eat(meat);
+        duck.eat(grass);
+        System.out.println(duck.getSatiety());
+        System.out.println(duck.getVoice());
+
+        worker.feed(duck,grass);
+        worker.getVoice(dog);
+
 
 
 

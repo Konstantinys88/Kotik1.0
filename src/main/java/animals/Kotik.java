@@ -2,6 +2,7 @@ package animals;
 
 
 import food.Food;
+import food.Meat;
 
 
 public class Kotik extends Carnivorous implements Run, Voice {
@@ -193,6 +194,8 @@ public class Kotik extends Carnivorous implements Run, Voice {
 
     @Override
     public void eat(Food food) {
-
+        if (food instanceof Meat){
+            this.satiety += ((Meat) food).getEnergy();
+        } else System.out.println("Еда не вкусная");
     }
 }

@@ -4,7 +4,7 @@ public class Grass extends Food{
 
 
     @Override
-    int getEnergy() {
+    public int getEnergy() {
         return 1;
     }
 }

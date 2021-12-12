@@ -1,16 +1,14 @@
 package animals;
 
 import food.Food;
+import food.Grass;
+import food.Meat;
 
 public class Dog extends Carnivorous implements Run,Swim,Voice{
 
-    private String Satiety;
+    private String satiety;
     public String getSatiety() {
-        return Satiety;
-    }
-
-    public void setSatiety(String satiety) {
-        Satiety = satiety;
+        return satiety;
     }
 
 
@@ -31,7 +29,9 @@ public class Dog extends Carnivorous implements Run,Swim,Voice{
 
     @Override
     public void eat(Food food) {
-
+        if (food instanceof Meat){
+            this.satiety += ((Meat) food).getEnergy();
+        } else System.out.println("Еда не вкусная");
     }
 
 
