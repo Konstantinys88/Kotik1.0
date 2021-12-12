@@ -32,6 +32,7 @@ public class Cow extends Herbivore implements Run,Swim,Voice{
     @Override
     public void eat(Food food) {
         if (food instanceof Grass){
+            System.out.println("Корова ест");
             this.satiety += ((Grass) food).getEnergy();
         } else System.out.println("Еда не вкусная");
     }

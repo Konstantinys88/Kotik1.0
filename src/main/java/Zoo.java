@@ -23,15 +23,12 @@ public class Zoo {
         worker.getVoice(fish);
 
         worker.feed(cow,meat);
+
+        System.out.println(crocodile.getSatiety());
+        worker.feed(crocodile,grass);
         System.out.println(crocodile.getSatiety());
         worker.feed(crocodile,meat);
         System.out.println(crocodile.getSatiety());
-        worker.feed(crocodile,meat);
-        System.out.println(crocodile.getSatiety());
-
-
-
-
 
 
     }

@@ -14,11 +14,13 @@ public class Dog extends Carnivorous implements Run,Swim,Voice{
 
     @Override
     public void run() {
+        System.out.println("run");
 
     }
 
     @Override
     public void swim() {
+        System.out.println("swim");
 
     }
 
@@ -30,6 +32,7 @@ public class Dog extends Carnivorous implements Run,Swim,Voice{
     @Override
     public void eat(Food food) {
         if (food instanceof Meat){
+            System.out.println("Собака ест");
             this.satiety += ((Meat) food).getEnergy();
         } else System.out.println("Еда не вкусная");
     }

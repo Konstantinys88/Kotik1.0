@@ -195,6 +195,7 @@ public class Kotik extends Carnivorous implements Run, Voice {
     @Override
     public void eat(Food food) {
         if (food instanceof Meat){
+            System.out.println("Кот ест");
             this.satiety += ((Meat) food).getEnergy();
         } else System.out.println("Еда не вкусная");
     }
