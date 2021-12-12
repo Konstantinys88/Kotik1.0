@@ -14,13 +14,13 @@ public class Zoo {
         Fish fish = new Fish();
         Kotik kotik = new Kotik();
 
+
         Worker worker = new Worker();
 
         Food grass = new Grass();
         Food meat = new Meat();
 
         worker.getVoice(dog);
-        worker.getVoice(fish);
 
         worker.feed(cow,meat);
 
@@ -29,6 +29,8 @@ public class Zoo {
         System.out.println(crocodile.getSatiety());
         worker.feed(crocodile,meat);
         System.out.println(crocodile.getSatiety());
+
+        worker.getVoice(fish);
 
 
     }
