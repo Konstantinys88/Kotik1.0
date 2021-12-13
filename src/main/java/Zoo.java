@@ -37,7 +37,8 @@ public class Zoo {
             e.swim();
         }
 
-        worker.getVoice(fish);
+        worker.getVoice(dog);
+
     }
 
      static Swim[] createPond(){

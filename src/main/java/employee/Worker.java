@@ -11,8 +11,11 @@ public class Worker {
             animal.eat(food);
     }
 
-     public void getVoice(Animal animal){
-            System.out.println(((Voice) animal).getVoice());
+
+         public void getVoice(Voice a){
+            System.out.println(a.getVoice());
     }
+
+
 
 }
