@@ -37,7 +37,6 @@ public class Zoo {
             e.swim();
         }
 
-
         worker.getVoice(fish);
     }
 

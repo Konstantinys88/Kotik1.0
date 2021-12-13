@@ -30,7 +30,7 @@ public class Kotik extends Carnivorous implements Run, Voice {
         count++;
     }
 
-    public boolean play() {
+    boolean play() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -39,7 +39,7 @@ public class Kotik extends Carnivorous implements Run, Voice {
         }
     }
 
-    public boolean sleep() {
+    boolean sleep() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -48,7 +48,7 @@ public class Kotik extends Carnivorous implements Run, Voice {
         }
     }
 
-    public boolean wash() {
+    boolean wash() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -57,7 +57,7 @@ public class Kotik extends Carnivorous implements Run, Voice {
         }
     }
 
-    public boolean walk() {
+    boolean walk() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -66,7 +66,7 @@ public class Kotik extends Carnivorous implements Run, Voice {
         }
     }
 
-    public boolean hunt() {
+    boolean hunt() {
         if (satiety > 0) {
             satiety--;
             return true;
