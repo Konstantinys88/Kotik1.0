@@ -3,16 +3,19 @@ import employee.Worker;
 import food.Food;
 import food.Grass;
 import food.Meat;
+import food.WrongFoodException;
+import model.Aviary;
+import model.Size;
 
 public class Zoo {
     public static void main(String[] args) {
 
-        Cow cow = new Cow();
-        Crocodile crocodile = new Crocodile();
-        Dog dog = new Dog();
-        Duck duck = new Duck();
-        Fish fish = new Fish();
-        Kotik kotik = new Kotik();
+        Cow cow = new Cow("MuMy");
+        Crocodile crocodile = new Crocodile("Croc");
+        Dog dog = new Dog("Dora");
+        Duck duck = new Duck("Skrydj");
+        Fish fish = new Fish("Som");
+        Kotik kotik = new Kotik("Mzy");
 
 
         Worker worker = new Worker();
@@ -22,32 +25,59 @@ public class Zoo {
 
         worker.getVoice(dog);
 
-        worker.feed(cow,meat);
+        try {
+            worker.feed(cow, meat);
+        } catch (WrongFoodException e) {
+            e.printStackTrace();
+        }
 
         System.out.println(crocodile.getSatiety());
-        worker.feed(crocodile,grass);
+
+        try {
+            worker.feed(crocodile, grass);
+        } catch (WrongFoodException e) {
+            e.printStackTrace();
+        }
+
         System.out.println(crocodile.getSatiety());
-        worker.feed(crocodile,meat);
+
+        try {
+            worker.feed(crocodile, meat);
+        } catch (WrongFoodException e) {
+            e.printStackTrace();
+        }
+
         System.out.println(crocodile.getSatiety());
 
+        Swim[] array = Zoo.createPond();
 
-        Swim[]array = Zoo.createPond();
-
-        for (Swim e : array){
+        for (Swim e : array) {
             e.swim();
         }
 
         worker.getVoice(dog);
 
+        Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
+        Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
+
     }
 
-     static Swim[] createPond(){
-        Swim[]swim = new Swim[5];
-        swim[0] = new Cow();
-        swim[1] = new Crocodile();
-        swim[2] = new Dog();
-        swim[3] = new Duck();
-        swim[4] = new Fish();
+    static Swim[] createPond() {
+        Swim[] swim = new Swim[5];
+        swim[0] = new Cow("My");
+        swim[1] = new Crocodile("Cro");
+        swim[2] = new Dog("Scharik");
+        swim[3] = new Duck("Kria");
+        swim[4] = new Fish("Meg");
         return swim;
     }
+
+    static void fillCarnivorousAviary() {
+        Carnivorous dog1 = new Dog("Tor");
+        Carnivorous Croc = new Crocodile("Xulk");
+        
+
+    }
+
+
 }

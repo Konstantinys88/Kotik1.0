@@ -2,13 +2,31 @@ package animals;
 
 import food.Food;
 import food.Meat;
+import food.WrongFoodException;
+import model.Size;
 
 public class Crocodile extends Carnivorous implements Run,Swim,Voice {
 
     private int satiety;
 
+    private String name;
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    public Crocodile(String name) {
+        super(name);
+    }
+
     public int getSatiety() {
         return satiety;
+    }
+
+    @Override
+    public Size getSize() {
+        return Size.LARGE;
     }
 
 
@@ -30,11 +48,11 @@ public class Crocodile extends Carnivorous implements Run,Swim,Voice {
     }
 
     @Override
-    public void eat(Food food) {
+    public void eat(Food food) throws WrongFoodException {
         if (food instanceof Meat){
             System.out.println("Крокодил ест");
             this.satiety += ((Meat) food).getEnergy();
-        } else System.out.println("Еда не вкусная");
+        } else throw new WrongFoodException();
     }
 
 

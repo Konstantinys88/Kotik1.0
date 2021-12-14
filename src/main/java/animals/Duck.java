@@ -2,13 +2,31 @@ package animals;
 
 import food.Food;
 import food.Grass;
+import food.WrongFoodException;
+import model.Size;
 
 public class Duck extends Herbivore implements Fly,Swim,Voice,Run {
 
     private int satiety;
 
+    private String name;
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    public Duck(String name) {
+        super(name);
+    }
+
     public int getSatiety() {
         return satiety;
+    }
+
+    @Override
+    public Size getSize() {
+        return Size.SMALL;
     }
 
     @Override
@@ -35,10 +53,10 @@ public class Duck extends Herbivore implements Fly,Swim,Voice,Run {
     }
 
     @Override
-    public void eat(Food food) {
+    public void eat(Food food) throws WrongFoodException {
         if (food instanceof Grass){
             System.out.println("Утка ест");
         this.satiety += ((Grass) food).getEnergy();
-        } else System.out.println("Еда не вкусная");
+        } else throw new WrongFoodException();
     }
 }
