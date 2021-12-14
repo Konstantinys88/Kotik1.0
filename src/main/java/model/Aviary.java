@@ -5,7 +5,7 @@ import animals.Animal;
 import java.util.HashMap;
 
 public class Aviary<Animals extends Animal> {
-    HashMap<String, Animals> animalsHashMap = new HashMap<>();
+    HashMap<String, Animals> animalsHashMap;
 
     Size size;
 
@@ -19,7 +19,6 @@ public class Aviary<Animals extends Animal> {
         } else {
             animalsHashMap.put(name, animals);
         }
-
     }
 
     public Animals getAnimal(String name) {

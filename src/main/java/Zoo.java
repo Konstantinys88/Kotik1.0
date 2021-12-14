@@ -17,7 +17,6 @@ public class Zoo {
         Fish fish = new Fish("Som");
         Kotik kotik = new Kotik("Mzy");
 
-
         Worker worker = new Worker();
 
         Food grass = new Grass();
@@ -57,9 +56,6 @@ public class Zoo {
 
         worker.getVoice(dog);
 
-        Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
-        Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
-
     }
 
     static Swim[] createPond() {
@@ -72,12 +68,30 @@ public class Zoo {
         return swim;
     }
 
+    Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
+    Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
+    Aviary<Animal>animalAviary = new Aviary<>(Size.SMALL);
+
     static void fillCarnivorousAviary() {
         Carnivorous dog1 = new Dog("Tor");
-        Carnivorous Croc = new Crocodile("Xulk");
-        
+        Carnivorous croc = new Crocodile("Xulk");
+    }
 
+    static void fillHerbivoreAviary(){
+
+    }
+
+    static Carnivorous getCarnivorous(String name){
+        return null;
+    }
+
+    static Herbivore getHerbivore(String name){
+        return null;
     }
 
 
 }
+
+
+
+
