@@ -59,6 +59,9 @@ public class Zoo {
         worker.getVoice(dog);
 
         fillHerbivoreAviary();
+        fillCarnivorousAviary();
+
+        getHerbivore("Cat");
 
 
     }
