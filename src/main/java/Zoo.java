@@ -25,19 +25,19 @@ public class Zoo {
 
         worker.getVoice(dog);
 
-        try {
-            worker.feed(cow, meat);
-        } catch (WrongFoodException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            worker.feed(cow, meat);
+//        } catch (WrongFoodException e) {
+//            e.printStackTrace();
+//        }
 
         System.out.println(crocodile.getSatiety());
 
-        try {
-            worker.feed(crocodile, grass);
-        } catch (WrongFoodException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            worker.feed(crocodile, grass);
+//        } catch (WrongFoodException e) {
+//            e.printStackTrace();
+//        }
 
         System.out.println(crocodile.getSatiety());
 
