@@ -25,19 +25,19 @@ public class Zoo {
 
         worker.getVoice(dog);
 
-//        try {
-//            worker.feed(cow, meat);
-//        } catch (WrongFoodException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            worker.feed(cow, meat);
+        } catch (WrongFoodException e) {
+            e.printStackTrace();
+        }
 
         System.out.println(crocodile.getSatiety());
 
-//        try {
-//            worker.feed(crocodile, grass);
-//        } catch (WrongFoodException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            worker.feed(crocodile, grass);
+        } catch (WrongFoodException e) {
+            e.printStackTrace();
+        }
 
         System.out.println(crocodile.getSatiety());
 
@@ -79,20 +79,18 @@ public class Zoo {
     static Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
 
     static void fillCarnivorousAviary() {
-//        Carnivorous dog1 = new Dog("Tor");
         Carnivorous croc = new Crocodile("Xulk");
-//        carnivorousAviary.addAnimal(dog1.name, dog1);
+        Carnivorous croc1 = new Crocodile("Tor");
         carnivorousAviary.addAnimal(croc.name,croc);
+        carnivorousAviary.addAnimal(croc1.name, croc1);
 
     }
 
     static void fillHerbivoreAviary(){
-//        Herbivore duck1 = new Duck("Sofia");
-//        Herbivore cow1 = new Cow("Maria");
         Herbivore fish1 = new Fish("Cat");
-//        herbivoreAviary.addAnimal(duck1.name, duck1);
-//        herbivoreAviary.addAnimal(cow1.name, cow1);
+        Herbivore fish2 = new Fish("Sofia");
         herbivoreAviary.addAnimal(fish1.name,fish1);
+        herbivoreAviary.addAnimal(fish2.name, fish2);
 
     }
 
