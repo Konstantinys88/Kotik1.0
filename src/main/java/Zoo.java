@@ -7,7 +7,6 @@ import food.WrongFoodException;
 import model.Aviary;
 import model.Size;
 
-import java.util.HashMap;
 
 public class Zoo {
     public static void main(String[] args) {
@@ -80,19 +79,19 @@ public class Zoo {
     static Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
 
     static void fillCarnivorousAviary() {
-        Carnivorous dog1 = new Dog("Tor");
+//        Carnivorous dog1 = new Dog("Tor");
         Carnivorous croc = new Crocodile("Xulk");
-        carnivorousAviary.addAnimal(dog1.name, dog1);
+//        carnivorousAviary.addAnimal(dog1.name, dog1);
         carnivorousAviary.addAnimal(croc.name,croc);
 
     }
 
     static void fillHerbivoreAviary(){
-        Herbivore duck1 = new Duck("Sofia");
-        Herbivore cow1 = new Cow("Maria");
+//        Herbivore duck1 = new Duck("Sofia");
+//        Herbivore cow1 = new Cow("Maria");
         Herbivore fish1 = new Fish("Cat");
-        herbivoreAviary.addAnimal(duck1.name, duck1);
-        herbivoreAviary.addAnimal(cow1.name, cow1);
+//        herbivoreAviary.addAnimal(duck1.name, duck1);
+//        herbivoreAviary.addAnimal(cow1.name, cow1);
         herbivoreAviary.addAnimal(fish1.name,fish1);
 
     }
