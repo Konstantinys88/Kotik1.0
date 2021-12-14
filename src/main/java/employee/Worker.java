@@ -1,7 +1,6 @@
 package employee;
 
 import animals.Animal;
-import animals.Swim;
 import animals.Voice;
 import food.Food;
 import food.WrongFoodException;
