@@ -9,7 +9,6 @@ public class Dog extends Carnivorous implements Run,Swim,Voice{
 
     private int satiety;
 
-    private String name;
 
     @Override
     public String getName() {

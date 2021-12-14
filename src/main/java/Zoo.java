@@ -7,6 +7,8 @@ import food.WrongFoodException;
 import model.Aviary;
 import model.Size;
 
+import java.util.HashMap;
+
 public class Zoo {
     public static void main(String[] args) {
 
@@ -56,6 +58,9 @@ public class Zoo {
 
         worker.getVoice(dog);
 
+        fillHerbivoreAviary();
+
+
     }
 
     static Swim[] createPond() {
@@ -68,25 +73,33 @@ public class Zoo {
         return swim;
     }
 
-    Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
-    Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
-    Aviary<Animal>animalAviary = new Aviary<>(Size.SMALL);
+    static Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
+    static Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
 
     static void fillCarnivorousAviary() {
         Carnivorous dog1 = new Dog("Tor");
         Carnivorous croc = new Crocodile("Xulk");
+        carnivorousAviary.addAnimal(dog1.name, dog1);
+        carnivorousAviary.addAnimal(croc.name,croc);
+
     }
 
     static void fillHerbivoreAviary(){
+        Herbivore duck1 = new Duck("Sofia");
+        Herbivore cow1 = new Cow("Maria");
+        Herbivore fish1 = new Fish("Cat");
+        herbivoreAviary.addAnimal(duck1.name, duck1);
+        herbivoreAviary.addAnimal(cow1.name, cow1);
+        herbivoreAviary.addAnimal(fish1.name,fish1);
 
     }
 
     static Carnivorous getCarnivorous(String name){
-        return null;
+        return carnivorousAviary.getAnimal(name);
     }
 
     static Herbivore getHerbivore(String name){
-        return null;
+        return herbivoreAviary.getAnimal(name);
     }
 
 
