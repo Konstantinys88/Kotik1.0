@@ -33,12 +33,14 @@ public class Aviary<Animals extends Animal> {
 //        else return false;
 //    }
 
-        public boolean removeAnimal(String name) {
-                aviaryMap.remove(name);
-                return true;
-            }
-
-
+    public boolean removeAnimal(String name) {
+        if (aviaryMap.containsKey(name)) {
+            aviaryMap.remove(name);
+            return true;
+        } else {
+            return false;
+        }
     }
+}
 
 

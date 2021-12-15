@@ -45,7 +45,12 @@ public class Zoo {
 
         getHerbivore("Cat");
 
-        carnivorousAviary.removeAnimal( "Tor");
+
+        System.out.println(carnivorousAviary.getAnimal("Tor"));
+        System.out.println(carnivorousAviary.removeAnimal("Tor"));
+        System.out.println(carnivorousAviary.getAnimal("Tor"));
+        System.out.println(carnivorousAviary.removeAnimal("NO"));
+        System.out.println(carnivorousAviary.getAnimal("123"));
         herbivoreAviary.removeAnimal( "Cat");
 
 
