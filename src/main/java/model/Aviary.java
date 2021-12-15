@@ -15,7 +15,6 @@ public class Aviary<Animals extends Animal> {
 
     public void addAnimal(Animals animals) {
         if (animals.getSize() != size) {
-            //animalsHashMap.put(animals.name, animals);
             throw new WrongSizeException();
         } else {
             aviaryMap.put(animals.name, animals);
@@ -26,13 +25,20 @@ public class Aviary<Animals extends Animal> {
         return aviaryMap.get(name);
     }
 
-    public boolean removeAnimal(String name) {
-        if (aviaryMap.containsKey(name)) {
-            aviaryMap.remove(name);
-            return true;
-        } else return false;
+//    public boolean removeAnimal(String name) {
+//        if (aviaryMap.containsKey(name)) {
+//            aviaryMap.remove(name);
+//            return true;
+//        }
+//        else return false;
+//    }
+
+        public boolean removeAnimal(String name) {
+                aviaryMap.remove(name);
+                return true;
+            }
+
 
     }
 
 
-}

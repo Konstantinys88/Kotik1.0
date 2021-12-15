@@ -24,28 +24,11 @@ public class Zoo {
         Food meat = new Meat();
 
         worker.getVoice(dog);
-
-        try {
-            worker.feed(cow, meat);
-        } catch (WrongFoodException e) {
-            e.printStackTrace();
-        }
-
+        worker.feed(cow, meat);
         System.out.println(crocodile.getSatiety());
-
-        try {
-            worker.feed(crocodile, grass);
-        } catch (WrongFoodException e) {
-            e.printStackTrace();
-        }
-
+        worker.feed(crocodile, grass);
         System.out.println(crocodile.getSatiety());
-
-        try {
-            worker.feed(crocodile, meat);
-        } catch (WrongFoodException e) {
-            e.printStackTrace();
-        }
+        worker.feed(crocodile, meat);
 
         System.out.println(crocodile.getSatiety());
 
@@ -62,8 +45,8 @@ public class Zoo {
 
         getHerbivore("Cat");
 
-        carnivorousAviary.removeAnimal("Tor");
-        herbivoreAviary.removeAnimal("Cat");
+        carnivorousAviary.removeAnimal( "Tor");
+        herbivoreAviary.removeAnimal( "Cat");
 
 
     }
@@ -89,7 +72,7 @@ public class Zoo {
 
     }
 
-    static void fillHerbivoreAviary(){
+    static void fillHerbivoreAviary() {
         Herbivore fish1 = new Fish("Cat");
         Herbivore fish2 = new Fish("Sofia");
         herbivoreAviary.addAnimal(fish1);
@@ -97,11 +80,11 @@ public class Zoo {
 
     }
 
-    static Carnivorous getCarnivorous(String name){
+    static Carnivorous getCarnivorous(String name) {
         return carnivorousAviary.getAnimal(name);
     }
 
-    static Herbivore getHerbivore(String name){
+    static Herbivore getHerbivore(String name) {
         return herbivoreAviary.getAnimal(name);
     }
 
