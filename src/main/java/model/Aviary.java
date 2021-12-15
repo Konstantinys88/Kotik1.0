@@ -29,10 +29,10 @@ public class Aviary<Animals extends Animal> {
     public boolean removeAnimal(String name) {
         if (aviaryMap.containsKey(name)) {
             aviaryMap.remove(name);
-            System.out.println("Размер HashMap " + aviaryMap.size());
+            System.out.println("Размер HashMap = " + aviaryMap.size());
             return true;
         } else {
-            System.out.println("Размер HashMap " + aviaryMap.size());
+            System.out.println("Размер HashMap = " + aviaryMap.size());
             return false;
         }
     }

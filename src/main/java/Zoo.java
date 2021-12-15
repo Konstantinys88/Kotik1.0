@@ -47,8 +47,7 @@ public class Zoo {
         System.out.println(carnivorousAviary.removeAnimal("Нет такого животного"));
         System.out.println(carnivorousAviary.removeAnimal("Tor"));
         System.out.println(herbivoreAviary.removeAnimal( "Нет такой рыбы"));
-
-
+        System.out.println(herbivoreAviary.removeAnimal("Cat"));
 
     }
 
