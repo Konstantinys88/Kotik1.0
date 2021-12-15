@@ -1,7 +1,13 @@
 package animals;
 
 
-public class Kotik {
+import food.Food;
+import food.Meat;
+import food.WrongFoodException;
+import model.Size;
+
+
+public class Kotik extends Carnivorous implements Run, Voice {
     private String name;
     private String voice;
     private int satiety;
@@ -14,6 +20,7 @@ public class Kotik {
     private final static int METHODS = 5;
 
     public Kotik(String name, String voice, int satiety, int weight) {
+        super(name);
         this.name = name;
         this.voice = voice;
         this.satiety = satiety;
@@ -22,11 +29,12 @@ public class Kotik {
 
     }
 
-    public Kotik() {
+    public Kotik(String name) {
+        super(name);
         count++;
     }
 
-    public boolean play() {
+    boolean play() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -35,7 +43,7 @@ public class Kotik {
         }
     }
 
-    public boolean sleep() {
+    boolean sleep() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -44,7 +52,7 @@ public class Kotik {
         }
     }
 
-    public boolean wash() {
+    boolean wash() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -53,7 +61,7 @@ public class Kotik {
         }
     }
 
-    public boolean walk() {
+    boolean walk() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -62,7 +70,7 @@ public class Kotik {
         }
     }
 
-    public boolean hunt() {
+    boolean hunt() {
         if (satiety > 0) {
             satiety--;
             return true;
@@ -76,7 +84,7 @@ public class Kotik {
         String[] anotherDay = new String[24];
         for (int i = 0; i < anotherDay.length; i++) {
             switch (getRandomNumber()){
-                case 1: if (play() == true){
+                case 1: if (play()){
                     anotherDay[i] = i + " - Играет";
                 }
                 else {
@@ -85,7 +93,7 @@ public class Kotik {
                 }
                     break;
 
-                case 2: if (sleep() == true){
+                case 2: if (sleep()){
                     anotherDay[i] = i + " - Спит";
                 }
                 else  {
@@ -94,7 +102,7 @@ public class Kotik {
                 }
                     break;
 
-                case 3: if (wash() == true){
+                case 3: if (wash()){
                     anotherDay[i] = i + " - Умывается";
                 }
                 else  {
@@ -103,7 +111,7 @@ public class Kotik {
                 }
                     break;
 
-                case 4: if (walk() == true){
+                case 4: if (walk()){
                     anotherDay[i] = i + " - Гуляет";
                 }
                 else  {
@@ -112,7 +120,7 @@ public class Kotik {
                 }
                     break;
 
-                case 5: if (hunt() == true){
+                case 5: if (hunt()){
                     anotherDay[i] = i + " - Охотится";
                 }
                 else  {
@@ -166,6 +174,11 @@ public class Kotik {
         return satiety;
     }
 
+    @Override
+    public Size getSize() {
+        return Size.SMALL;
+    }
+
     public void setSatiety(int satiety) {
         this.satiety = satiety;
     }
@@ -183,4 +196,16 @@ public class Kotik {
     }
 
 
+    @Override
+    public void run() {
+
+    }
+
+    @Override
+    public void eat(Food food) throws WrongFoodException {
+        if (food instanceof Meat){
+            System.out.println("Кот ест");
+            this.satiety += ((Meat) food).getEnergy();
+        } else throw new WrongFoodException();
+    }
 }

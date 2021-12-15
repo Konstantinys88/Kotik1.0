@@ -10,7 +10,7 @@ public class Application {
     public static void main(String[] args) {
 
         Kotik cat1 = new Kotik("Vasia","Gav",0,8);
-        Kotik cat2 = new Kotik();
+        Kotik cat2 = new Kotik("miay");
 
         System.out.println(Application.compareVoice(cat1,cat2));
         System.out.println(Kotik.getCount());
