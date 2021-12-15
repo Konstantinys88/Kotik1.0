@@ -75,8 +75,8 @@ public class Zoo {
         return swim;
     }
 
-    static Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
-    static Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
+    private static Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
+    private static Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
 
     static void fillCarnivorousAviary() {
         Carnivorous croc = new Crocodile("Xulk");
