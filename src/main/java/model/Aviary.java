@@ -5,7 +5,8 @@ import animals.Animal;
 import java.util.HashMap;
 
 public class Aviary<Animals extends Animal> {
-    private HashMap<String, Animals> aviaryMap = new HashMap<>();
+    private HashMap<String, Animals> aviaryMap = new HashMap<>(1);
+
 
     private Size size;
 
