@@ -25,7 +25,6 @@ public class Aviary<Animals extends Animal> {
         return aviaryMap.get(name);
     }
 
-
     public boolean removeAnimal(String name) {
         if (aviaryMap.containsKey(name)) {
             aviaryMap.remove(name);
