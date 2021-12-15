@@ -3,10 +3,8 @@ import employee.Worker;
 import food.Food;
 import food.Grass;
 import food.Meat;
-import food.WrongFoodException;
 import model.Aviary;
 import model.Size;
-
 
 public class Zoo {
     public static void main(String[] args) {
@@ -45,13 +43,11 @@ public class Zoo {
 
         getHerbivore("Cat");
 
-
         System.out.println(carnivorousAviary.getAnimal("Tor"));
+        System.out.println(carnivorousAviary.removeAnimal("Нет такого животного"));
         System.out.println(carnivorousAviary.removeAnimal("Tor"));
-        System.out.println(carnivorousAviary.getAnimal("Tor"));
-        System.out.println(carnivorousAviary.removeAnimal("NO"));
-        System.out.println(carnivorousAviary.getAnimal("123"));
-        herbivoreAviary.removeAnimal( "Cat");
+        System.out.println(herbivoreAviary.removeAnimal( "Нет такой рыбы"));
+
 
 
     }
@@ -72,16 +68,20 @@ public class Zoo {
     static void fillCarnivorousAviary() {
         Carnivorous croc = new Crocodile("Xulk");
         Carnivorous croc1 = new Crocodile("Tor");
+        Carnivorous croc3 = new Crocodile("Loki");
         carnivorousAviary.addAnimal(croc);
         carnivorousAviary.addAnimal(croc1);
+        carnivorousAviary.addAnimal(croc3);
 
     }
 
     static void fillHerbivoreAviary() {
         Herbivore fish1 = new Fish("Cat");
         Herbivore fish2 = new Fish("Sofia");
+        Herbivore fish3 = new Fish("Fish3");
         herbivoreAviary.addAnimal(fish1);
         herbivoreAviary.addAnimal(fish2);
+        herbivoreAviary.addAnimal(fish3);
 
     }
 

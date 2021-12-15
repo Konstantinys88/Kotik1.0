@@ -25,19 +25,14 @@ public class Aviary<Animals extends Animal> {
         return aviaryMap.get(name);
     }
 
-//    public boolean removeAnimal(String name) {
-//        if (aviaryMap.containsKey(name)) {
-//            aviaryMap.remove(name);
-//            return true;
-//        }
-//        else return false;
-//    }
 
     public boolean removeAnimal(String name) {
         if (aviaryMap.containsKey(name)) {
             aviaryMap.remove(name);
+            System.out.println("Размер HashMap " + aviaryMap.size());
             return true;
         } else {
+            System.out.println("Размер HashMap " + aviaryMap.size());
             return false;
         }
     }
