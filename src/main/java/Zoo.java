@@ -62,6 +62,9 @@ public class Zoo {
 
         getHerbivore("Cat");
 
+        carnivorousAviary.removeAnimal("Tor");
+        herbivoreAviary.removeAnimal("Cat");
+
 
     }
 
