@@ -81,16 +81,16 @@ public class Zoo {
     static void fillCarnivorousAviary() {
         Carnivorous croc = new Crocodile("Xulk");
         Carnivorous croc1 = new Crocodile("Tor");
-        carnivorousAviary.addAnimal(croc.name,croc);
-        carnivorousAviary.addAnimal(croc1.name, croc1);
+        carnivorousAviary.addAnimal(croc);
+        carnivorousAviary.addAnimal(croc1);
 
     }
 
     static void fillHerbivoreAviary(){
         Herbivore fish1 = new Fish("Cat");
         Herbivore fish2 = new Fish("Sofia");
-        herbivoreAviary.addAnimal(fish1.name,fish1);
-        herbivoreAviary.addAnimal(fish2.name, fish2);
+        herbivoreAviary.addAnimal(fish1);
+        herbivoreAviary.addAnimal(fish2);
 
     }
 

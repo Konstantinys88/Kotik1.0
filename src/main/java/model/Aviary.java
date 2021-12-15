@@ -13,11 +13,12 @@ public class Aviary<Animals extends Animal> {
         this.size = size;
     }
 
-    public void addAnimal(String name, Animals animals) {
-        if (animals.getSize() != this.size) {
+    public void addAnimal(Animals animals) {
+        if (animals.getSize() != size) {
+            //animalsHashMap.put(animals.name, animals);
             throw new WrongSizeException();
         } else {
-            animalsHashMap.put(name, animals);
+            animalsHashMap.put(animals.name, animals);
         }
     }
 
