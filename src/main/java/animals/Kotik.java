@@ -195,7 +195,6 @@ public class Kotik extends Carnivorous implements Run, Voice {
         return count;
     }
 
-
     @Override
     public void run() {
 

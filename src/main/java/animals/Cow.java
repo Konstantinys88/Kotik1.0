@@ -9,12 +9,10 @@ public class Cow extends Herbivore implements Run,Swim,Voice{
 
     private int satiety;
 
-
     @Override
     public String getName() {
         return name;
     }
-
 
     public Cow(String name) {
         super(name);

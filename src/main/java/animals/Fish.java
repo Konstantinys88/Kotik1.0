@@ -9,7 +9,6 @@ public class Fish extends Herbivore implements Swim{
 
     private int satiety;
 
-
     @Override
     public String getName() {
         return name;

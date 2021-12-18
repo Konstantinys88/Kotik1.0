@@ -1,7 +1,5 @@
 package model;
-
 import animals.Animal;
-
 import java.util.HashMap;
 
 public class Aviary<Animals extends Animal> {
@@ -11,7 +9,7 @@ public class Aviary<Animals extends Animal> {
 
     private Size size;
 
-    public Aviary(Size size) {
+   public Aviary(Size size) {
         this.size = size;
     }
 

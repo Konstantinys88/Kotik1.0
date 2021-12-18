@@ -12,12 +12,9 @@ public abstract class Animal {
         return name;
     }
 
-
     public Animal(String name) {
         this.name = name;
     }
-
-    int satiety;
 
     public abstract void eat(Food food) throws WrongFoodException;
 

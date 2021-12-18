@@ -16,11 +16,9 @@ public class Worker {
 
     }
 
-
-         public void getVoice(Voice a){
-            System.out.println(a.getVoice());
+    public void getVoice(Voice a) {
+        System.out.println(a.getVoice());
     }
-
 
 
 }

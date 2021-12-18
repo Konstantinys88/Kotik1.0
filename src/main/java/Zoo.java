@@ -16,6 +16,10 @@ public class Zoo {
         Fish fish = new Fish("Som");
         Kotik kotik = new Kotik("Mzy");
 
+        duck.fly();
+        fish.swim();
+        kotik.run();
+
         Worker worker = new Worker();
 
         Food grass = new Grass();
@@ -40,6 +44,8 @@ public class Zoo {
 
         fillHerbivoreAviary();
         fillCarnivorousAviary();
+
+        System.out.println(getCarnivorous("Cat"));
 
         getHerbivore("Cat");
 

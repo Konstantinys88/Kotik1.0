@@ -9,7 +9,6 @@ public class Dog extends Carnivorous implements Run,Swim,Voice{
 
     private int satiety;
 
-
     @Override
     public String getName() {
         return name;
@@ -27,7 +26,6 @@ public class Dog extends Carnivorous implements Run,Swim,Voice{
     public Size getSize() {
         return Size.MEDIUM;
     }
-
 
     @Override
     public void run() {

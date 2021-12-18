@@ -1,23 +1,10 @@
 package animals;
-
-import food.Food;
-import food.Meat;
-import food.WrongFoodException;
 import model.Size;
 
-public class Carnivorous extends Animal {
-
+public abstract class Carnivorous extends Animal {
 
     public Carnivorous(String name) {
         super(name);
-    }
-
-    @Override
-    public void eat(Food food) throws WrongFoodException {
-        if (food instanceof Meat) {
-            System.out.println("Eст");
-            this.satiety += ((Meat) food).getEnergy();
-        } else throw new WrongFoodException();
     }
 
     @Override
